@@ -1,0 +1,5 @@
+[functions.rewarded-ad-ssv]
+verify_jwt = false
+
+[functions.start-rewarded-ad]
+verify_jwt = true

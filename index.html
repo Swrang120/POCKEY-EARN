@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
 <title>Pockey Earn</title>
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./styles.css?v=20261008-3">
 <style>
-  body{background:#07111f;color:#fff}
-  #app{min-height:100vh}
-  .boot-fallback{min-height:100vh;display:grid;place-items:center;padding:20px}
-  .boot-card{width:min(460px,100%);background:#0e1b2d;border:1px solid #21334b;border-radius:20px;padding:24px}
-  .boot-title{font-size:28px;font-weight:900}.boot-title span{color:#7c6cff}
-  .boot-msg{color:#91a1b7;font-size:14px;line-height:1.6}
-  .boot-error{color:#ff9cac;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+html,body{min-height:100%;background:#07111f!important}
+body{margin:0;color:#fff}
+#app{min-height:100vh}
+.boot-fallback{min-height:100vh;display:grid;place-items:center;padding:24px}
+.boot-card{width:min(460px,100%);background:#0e1b2d;border:1px solid #2a3d58;border-radius:22px;padding:24px;box-shadow:0 15px 50px rgba(0,0,0,.25)}
+.boot-title{font-size:30px;font-weight:900}.boot-title span{color:#7c6cff}
+.boot-msg{color:#a8b6c9;font-size:14px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -21,24 +22,11 @@
     <div class="boot-card">
       <div class="boot-title">Pockey <span>Earn</span></div>
       <p class="boot-msg">Starting app…</p>
-      <p id="bootError" class="boot-error"></p>
     </div>
   </div>
 </div>
-<script>
-(function(){
-  window.addEventListener("error",function(e){
-    var el=document.getElementById("bootError");
-    if(el) el.textContent="App error: "+(e.message||"JavaScript failed to load");
-  });
-  window.addEventListener("unhandledrejection",function(e){
-    var el=document.getElementById("bootError");
-    if(el) el.textContent="App error: "+(e.reason&&e.reason.message?e.reason.message:String(e.reason));
-  });
-})();
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./ads-config.js"></script>
-<script src="./app.js"></script>
+<script src="./ads-config.js?v=20261008-3"></script>
+<script src="./app.js?v=20261008-3"></script>
 </body>
 </html>
